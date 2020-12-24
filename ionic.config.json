@@ -1,0 +1,7 @@
+{
+  "name": "stageSi",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

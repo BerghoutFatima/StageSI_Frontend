@@ -1,0 +1,61 @@
+.bg-img {
+    padding: 1px;
+    height: 100%;
+    width: 100%;
+    background-image: url('http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    color:  rgb(87, 45, 48);
+    margin-left: 20px;
+    font-size: 30px;
+}
+
+h5 {
+    color: rgb(141, 69, 141);
+    margin-left: 20px;
+    margin-top: -7px;
+    font-size: medium;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+}
+
+h2 {
+    color: #2e2c2c;
+    text-align: center;
+    margin-top: -7px;
+    font-size: 85px;
+    margin-bottom: 15px;
+}
+.box {
+    border: 0;
+    width: 75%;
+    background: #5c4d66;
+    margin: 20px auto;
+    border: 2px solid #78449b;
+    padding: 20px 40px;
+    outline: none;
+    border-radius: 20px;
+    transition: 0.25s;
+    cursor: pointer
+}
+.boxx {
+    width: 40%;
+    margin-left: 30%;  
+    font-weight:bold;
+    color: #f7f1f6;
+  }
+
+.reset {
+    
+    margin-left: 5%;  
+}
+
+.boxxs {
+    width: 40%;
+    margin-left: 30%;  
+    background: #382442;
+}
+

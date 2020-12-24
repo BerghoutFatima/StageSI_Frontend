@@ -1,0 +1,21 @@
+<ion-content>
+  <div class="bg-img">
+      
+          <br>
+              <h1>ESPACE CPF</h1>
+              <br><br>
+              <h5>{{ currentDate }}</h5>
+              <br>
+              <h1>Veuillez choisir une classe SVP</h1>
+              
+              <br><br><br>   
+      <ion-button (click)="onShowHomeCpf1()" class="boxx" shape="round" fill="outline">1ère année GI </ion-button>
+      <br>
+      <ion-button (click)="onShowHomeCpf2()" class="boxx" shape="round" fill="outline" >2ème année GI</ion-button>
+      <br>
+      <ion-button (click)="onShowHomeCpf3()" class="boxx" shape="round" fill="outline" >3ème année GI</ion-button><br>
+      <br>
+      <a routerLink="/login" class="reset">Se déconnecter ?</a>
+    </div>     
+</ion-content>
+

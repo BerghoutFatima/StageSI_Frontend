@@ -1,0 +1,39 @@
+<ion-header [translucent]="true">
+  <ion-toolbar id='fo' >
+    <ion-buttons slot="start">
+      <ion-button (click)="goBack()"><ion-icon name="arrow-back-outline"></ion-icon></ion-button>
+      <h3> Proposer un sujet</h3>
+    </ion-buttons>
+
+    <ion-buttons slot="primary">
+      <ion-button routerLink="/notifications">
+        <h1>{{etd[0].username}}</h1>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <div>
+    <br>
+    <ion-input class="box" placeholder="Titre" type="text" [(ngModel)]="projet.titre"></ion-input>
+    
+    <ion-textarea class="box" placeholder="Description du sujet" type="text" [(ngModel)]="projet.descriptif"></ion-textarea>
+
+    <ion-input class="box" placeholder="Tâches à faire" type="text" [(ngModel)]="projet.taches[0]"></ion-input>
+
+    <ion-input class="box" placeholder="Délai" type="date" [(ngModel)]="projet.delai_realisation"></ion-input>
+
+    <ion-select  class="box" multiple="true"   placeholder="Membre(s)" [(ngModel)]="projet.listeDesMembres" (click)="listerEtudiants()" >
+      <ion-list >
+        <ion-select-option  *ngFor="let item of pageEtudiants" [value]="item">{{item}}</ion-select-option>
+      </ion-list>
+    </ion-select>
+
+    <ion-button class="boxx" shape="round" fill="outline" horizontal="end" (click)="proposerProjet()">Enregistrer</ion-button>
+    
+  </div>
+
+</ion-content>
+

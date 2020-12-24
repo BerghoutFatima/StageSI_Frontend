@@ -1,0 +1,60 @@
+<ion-header [translucent]="true">
+  <ion-toolbar id='fo' >
+    <ion-buttons slot="start">
+      <ion-button (click)="goBack()"><ion-icon name="arrow-back-outline"></ion-icon></ion-button>
+      <h3>Projets en cours</h3>
+    </ion-buttons>
+
+    <ion-buttons slot="primary">
+      <ion-button routerLink="/notifications">
+        <h1>{{etd[0].username}}</h1>
+        <!--ion-icon name="notifications-circle-outline"></ion-icon-->
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<!-- Searchbar with cancel button always shown -->
+<ion-content padding>
+  <ion-searchbar [(ngModel)]="motCle" (ionChange)="chercher(laclasse)"></ion-searchbar>
+<ion-list>
+  <ion-item *ngFor="let p of pageProjets" (click)="onShowDetails(p.id)">
+    <ion-label>{{p.titre}}</ion-label>
+    <p>Lire plus</p>
+    <ion-icon id='mauve' name="chevron-forward-outline"></ion-icon>
+  </ion-item>
+</ion-list>
+    
+</ion-content>
+
+  <!-- le bouttons bleu Plus -->
+  <ion-fab  vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="dark">
+      <h5><b><ion-icon name="add-outline"></ion-icon></b>
+      </h5>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button (click)="LogoutDialog()" color=#663e68 data-desc="Se déconnecter">
+        <ion-icon name="log-out-outline"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button (click)="onShowPropose()" color=#663e68  data-desc="Proposer un sujet">
+        <ion-icon name="add-outline"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+
+  
+
+
+
+
+
+
+
+
+
+      
+      
+          
+
+

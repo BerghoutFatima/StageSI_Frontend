@@ -1,0 +1,34 @@
+<ion-content>
+  <div class="bg-img">
+      
+          
+              <h1><b>Plateforme EHTP</b></h1>
+            <br>
+              <h1>AUTHENTIFICATION</h1>
+              
+              <h5>{{ currentDate }}</h5>
+              <br>
+
+  <h2><ion-icon name="person-circle-outline"></ion-icon></h2>
+              
+              
+   
+        <ion-input  class="box" [(ngModel)]="etudiant.email" placeholder="   Votre@email.com" type="email">
+          <ion-icon name="mail-outline"></ion-icon>
+        </ion-input>
+          
+        <ion-input class="box" [(ngModel)]="etudiant.password" type="password" placeholder="   Mot de passe" [type]= "showPassword ? 'text' : 'password'">
+          <ion-icon slot="end" [name]="passwordToggleIcon" (click)="togglePassword()"></ion-icon>
+        </ion-input>
+      
+    <br>
+      <a routerLink="/reset-password" class="reset">Mot de passe oublié?</a>
+      <br>
+      <br>     
+      <ion-button class="boxx" shape="round" fill="outline" (click)="login()">Se connecter</ion-button>
+      <br>
+      <ion-button routerLink="/signup" class="boxx" shape="round" fill="outline" >S'inscrire</ion-button>
+      <br><br>
+    </div>     
+</ion-content>
+

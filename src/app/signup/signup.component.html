@@ -1,0 +1,38 @@
+<ion-content> 
+  <div class="bg-img">
+
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/login"></ion-back-button>
+      <h1>S'inscrire</h1>
+    </ion-buttons>
+
+    <br><br>
+
+    <h2><ion-icon name="person-add-outline"></ion-icon></h2>
+
+    <ion-input class="box" [(ngModel)]="etudiant.username" placeholder="   Nom Prenom" type="text" >
+      <ion-icon name="person-outline"></ion-icon>
+    </ion-input>
+
+    <ion-input class="box" [(ngModel)]="etudiant.email" placeholder="   Votre@email.com" type="email" required email>
+      <ion-icon name="mail-outline"></ion-icon>
+    </ion-input>
+
+    <ion-select class="box" placeholder="Classe" [(ngModel)]="etudiant.laclasse" (ionChange)="Getselected($event)">
+      <ion-list >
+        <ion-select-option value="1GI">1GI</ion-select-option>
+        <ion-select-option value="2GI">2GI</ion-select-option>
+        <ion-select-option value="3GI">3GI</ion-select-option>
+      </ion-list>
+    </ion-select>
+
+
+    <ion-input  class="box" [(ngModel)]="etudiant.password" type="password" placeholder="   Mot de passe" [type]= "showPassword ? 'text' : 'password'">
+      <ion-icon slot="end" [name]="passwordToggleIcon" (click)="togglePassword()"></ion-icon>
+    </ion-input>
+    <br>
+ 
+    <ion-button class="boxx" shape="round" fill="outline" (click)="signup()">S'inscrire</ion-button>
+    <br><br>
+  </div>     
+</ion-content>

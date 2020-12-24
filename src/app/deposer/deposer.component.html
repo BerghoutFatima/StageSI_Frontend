@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar id='fo' > 
+    <ion-buttons  slot="start">
+      <ion-button (click)="goBack()"><ion-icon name="arrow-back-outline"></ion-icon></ion-button>
+      <h3>Vos projets</h3>
+    </ion-buttons>
+     
+    <ion-buttons slot="primary">
+      <ion-button (click)="goToAbout()">
+        <h6>{{etd[0].username}}</h6>
+        <h1><ion-icon name="person-circle-outline"></ion-icon></h1>
+        <!--ion-icon color="danger" name="notifications-outline"></ion-icon-->
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+        <!-- Searchbar with cancel button always shown -->
+<ion-content padding>
+  <ion-searchbar [(ngModel)]="motCle" (ionChange)=" doSearch()"></ion-searchbar>
+<ion-list>
+  <ion-item *ngFor="let p of pageProjetsEtudiant"  (click)="upload(p.id)">
+    <ion-label>{{p.titre}}</ion-label>
+    <p>Déposer</p>
+    <ion-icon id='mauve' name="chevron-forward-outline"></ion-icon>
+  </ion-item>
+</ion-list>
+</ion-content>

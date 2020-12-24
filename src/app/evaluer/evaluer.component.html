@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar id='fo' >
+    <ion-buttons slot="start">
+      <ion-button (click)="goBack()"><ion-icon name="arrow-back-outline"></ion-icon></ion-button>
+      <h3>Evaluation</h3>
+    </ion-buttons>
+
+    <ion-buttons slot="primary">
+      <ion-button routerLink="/notifications">
+        <h1>{{etd[0].username}}</h1>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <div >
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title class="space">{{prjt.titre}}</ion-card-title>
+      </ion-card-header>
+
+      <ion-input class="boxs" [(ngModel)]="note" placeholder="Note sur 20" type="number" required>
+        <ion-icon name="pencil"></ion-icon>
+      </ion-input>
+      <ion-button  class="boxx" shape="round" fill="outline"  horizontal="end" (click)="evaluer()">Enregistrer</ion-button>
+    </ion-card>
+  </div>
+</ion-content>
